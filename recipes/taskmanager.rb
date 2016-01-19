@@ -10,6 +10,9 @@ template "/etc/init.d/taskmanager" do
   owner node[:flink][:user]
   group node[:hadoop][:group]
   mode 0754
+  variables({
+              :flavor => "#{node[:flink][:mode]}"
+            })
   notifies :enable, resources(:service => "taskmanager")
   notifies :restart, resources(:service => "taskmanager")
 end
