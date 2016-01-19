@@ -10,6 +10,7 @@
 ### END INIT INFO
 
 # Variables
+<% mode=@flavor -%>
 START_PROG="<%= "#{node[:flink][:home]}/bin/taskmanager.sh start #{mode}" %>"
 STOP_PROG="<%= "#{node[:flink][:home]}/bin/taskmanager.sh stop" %>"
 
