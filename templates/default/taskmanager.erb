@@ -10,7 +10,7 @@
 ### END INIT INFO
 
 # Variables
-START_PROG="<%= "#{node[:flink][:home]}/bin/taskmanager.sh start" %>"
+START_PROG="<%= "#{node[:flink][:home]}/bin/taskmanager.sh start #{[:flink][:mode]}" %>"
 STOP_PROG="<%= "#{node[:flink][:home]}/bin/taskmanager.sh stop" %>"
 
 EXEC_WITH_USER="su <%= node[:flink][:user] %> -l -c"
